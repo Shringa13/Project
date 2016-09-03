@@ -20,7 +20,7 @@ def get_twitter():
     """
     return TwitterAPI(consumer_key, consumer_secret, access_token, access_token_secret)
 
-
+"""
 def read_screen_names(filename):
     """
     Read a text file containing Twitter screen_names, one per line.
@@ -215,13 +215,14 @@ def draw_network(graph, users, filename):
     ###TODO
     pass
 
-
+"""
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
     screen_names = read_screen_names('candidates.txt')
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
+    """
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
@@ -237,7 +238,7 @@ def main():
     print('graph has %s nodes and %s edges' % (len(graph.nodes()), len(graph.edges())))
     draw_network(graph, users, 'network.png')
     print('network drawn to network.png')
-
+"""
 
 if __name__ == '__main__':
     main()
