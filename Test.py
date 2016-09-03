@@ -219,10 +219,11 @@ def draw_network(graph, users, filename):
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
+    """
     screen_names = read_screen_names('candidates.txt')
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
-    """
+    
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
