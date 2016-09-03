@@ -30,10 +30,12 @@ def read_screen_names(filename):
         A list of strings, one per screen_name, in the order they are listed
         in the file.
     Here's a doctest to confirm your implementation is correct.
-    """
-    >>> read_screen_names('candidates.txt')
+   
+     read_screen_names('candidates.txt')
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
-    
+    """
+    fh=open(filename,"r")
+    fh.read()
   
 def main():
     """ Main method. You should not modify this. """
