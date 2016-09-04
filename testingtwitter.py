@@ -25,7 +25,7 @@ def get_twitter():
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
-    req = twitter.request('https://api.twitter.com/1/users/show.json?screen_name=TheSuggmeister&include_entities=true')
+    req = twitter.request('https://api.twitter.com/1/users/show.json?screen_name=Shringa13&include_entities=true')
     """
     u= get_users(twitter,'Shringa13')
    
