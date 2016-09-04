@@ -74,7 +74,6 @@ def get_users(twitter, screen_names):
     """
     twitter = get_twitter()
     users = get_users(twitter, screen_names)
-    [u['id'] for u in users]
         return users
     
 def main():
