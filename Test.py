@@ -71,9 +71,11 @@ def get_users(twitter, screen_names):
         (e.g., screen_name, id, location, etc)
     See the API documentation here: https://dev.twitter.com/rest/reference/get/users/lookup
     In this example, I test retrieving two users: twitterapi and twitter.
-    >>> twitter = get_twitter()
-    >>> users = get_users(twitter, ['twitterapi', 'twitter'])
-    >>> [u['id'] for u in users]
+    """
+    twitter = get_twitter()
+    users = get_users(twitter, ['twitterapi', 'twitter'])
+    """
+    [u['id'] for u in users]
     [6253282, 783214]
     """
     
