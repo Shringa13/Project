@@ -74,7 +74,7 @@ def get_users(twitter, screen_names):
     """
     twitter = get_twitter()
     users = get_users(twitter, screen_names)
-        return users
+    return users
     
 def main():
     """ Main method. You should not modify this."""
