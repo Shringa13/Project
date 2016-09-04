@@ -73,7 +73,7 @@ def get_users(twitter, screen_names):
     In this example, I test retrieving two users: twitterapi and twitter.
     """
     twitter = get_twitter()
-    users = get_users(twitter, screen_names)
+    users = twitter.lookup_users(sc=screen_names)
     return users
     
 def main():
@@ -83,10 +83,9 @@ def main():
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
-    """
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
-    
+    """
     add_all_friends(twitter, users)
     print('Friends per candidate:')
     print_num_friends(users)
