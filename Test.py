@@ -76,9 +76,6 @@ def get_users(twitter, screen_names):
     users = get_users(twitter, screen_names)
     [u['id'] for u in users]
         return users
-    """
-    [6253282, 783214]
-    """
     
 def main():
     """ Main method. You should not modify this."""
