@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import sys
 import time
-from twitter import * import twitterAuth
+from twitter import * 
+import twitterAuth
 
 
 consumer_key = 'cgzXf3uv155176JFvWFDPPTLQ'
@@ -19,7 +20,7 @@ def get_twitter():
     Returns:
       An instance of TwitterAPI.
     """
-    return TwitterAPI(consumer_key, consumer_secret, access_token, access_token_secret)
+    return TwitterAuth(consumer_key, consumer_secret, access_token, access_token_secret)
 
 
 def read_screen_names(filename):
