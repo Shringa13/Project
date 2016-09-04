@@ -22,34 +22,11 @@ def get_twitter():
     return TwitterAPI(consumer_key, consumer_secret, access_token, access_token_secret)
 
 
-
-def get_users(twitter, screen_names):
-    """Retrieve the Twitter user objects for each screen_name.
-    Params:
-        twitter........The TwitterAPI object.
-        screen_names...A list of strings, one per screen_name
-    Returns:
-        A list of dicts, one per user, containing all the user information
-        (e.g., screen_name, id, location, etc)
-    See the API documentation here: https://dev.twitter.com/rest/reference/get/users/lookup
-    In this example, I test retrieving two users: twitterapi and twitter.
-    >>> twitter = get_twitter()
-    >>> users = get_users(twitter, ['twitterapi', 'twitter'])
-    >>> [u['id'] for u in users]
-    [6253282, 783214]
-    
-    twitter = get_twitter()
-    r = twitter.request('search/tweets', {'q':'pizza'})
-    for item in r.get_iterator():
-        print (item)
-        print('Established Twitter connection.')
-  """
-
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
-    r = twitter.json()
-    return r
+    req = twitter.request('https://api.twitter.com/1/users/show.json?screen_name=TheSuggmeister&include_entities=true')
+   print('Established Twitter connection.')
     """
     u= get_users(twitter,'Shringa13')
    
