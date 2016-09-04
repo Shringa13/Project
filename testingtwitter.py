@@ -20,19 +20,74 @@ def get_twitter():
       An instance of TwitterAPI.
     """
     return TwitterAPI(consumer_key, consumer_secret, access_token, access_token_secret)
+  
+
+def read_screen_names(filename):
+    """
+    Read a text file containing Twitter screen_names, one per line.
+    Params:
+        filename....Name of the file to read.
+    Returns:
+        A list of strings, one per screen_name, in the order they are listed
+        in the file.
+    Here's a doctest to confirm your implementation is correct.
+    >>> read_screen_names('candidates.txt')
+    ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
+    """
+    f=open(filename,'r')
+    return f
+
+
+# I've provided the method below to handle Twitter's rate limiting.
+# You should call this method whenever you need to access the Twitter API.
+def robust_request(twitter, resource, params, max_tries=5):
+    """ If a Twitter request fails, sleep for 15 minutes.
+    Do this at most max_tries times before quitting.
+    Args:
+      twitter .... A TwitterAPI object.
+      resource ... A resource string to request; e.g., "friends/ids"
+      params ..... A parameter dict for the request, e.g., to specify
+                   parameters like screen_name or count.
+      max_tries .. The maximum number of tries to attempt.
+    Returns:
+      A TwitterResponse object, or None if failed.
+    """
+    for i in range(max_tries):
+        request = twitter.request(resource, params)
+        if request.status_code == 200:
+            return request
+        else:
+            print('Got error %s \nsleeping for 15 minutes.' % request.text)
+            sys.stderr.flush()
+            time.sleep(61 * 15)
+
+
+def get_users(twitter, screen_names):
+    """Retrieve the Twitter user objects for each screen_name.
+    Params:
+        twitter........The TwitterAPI object.
+        screen_names...A list of strings, one per screen_name
+    Returns:
+        A list of dicts, one per user, containing all the user information
+        (e.g., screen_name, id, location, etc)
+    See the API documentation here: https://dev.twitter.com/rest/reference/get/users/lookup
+    In this example, I test retrieving two users: twitterapi and twitter.
+    >>> twitter = get_twitter()
+    >>> users = get_users(twitter, ['twitterapi', 'twitter'])
+    >>> [u['id'] for u in users]
+    [6253282, 783214]
+    """
+    ###TODO
+    pass
 
 
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
-    req = twitter.request('https://api.twitter.com/1/users/show.json?screen_name=Shringa13&include_entities=true')
-    """
-    u= get_users(twitter,'Shringa13')
-   
     screen_names = read_screen_names('candidates.txt')
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
-    
+    """
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
