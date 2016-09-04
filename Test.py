@@ -5,7 +5,7 @@ import networkx as nx
 import sys
 import time
 from twitter import * 
-import twitterAuth
+import twitterAPI
 
 
 consumer_key = 'cgzXf3uv155176JFvWFDPPTLQ'
@@ -20,7 +20,7 @@ def get_twitter():
     Returns:
       An instance of TwitterAPI.
     """
-    return TwitterAuth(consumer_key, consumer_secret, access_token, access_token_secret)
+    return TwitterAPI(consumer_key, consumer_secret, access_token, access_token_secret)
 
 
 def read_screen_names(filename):
