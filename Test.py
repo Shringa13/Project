@@ -76,7 +76,7 @@ def get_users(twitter, screen_names):
     use=twitter.users.search(sc=screen_names)
     [u['id'] for u in users]"""
     twitter = get_twitter()
-    users = get_users(twitter,['Shringa13'])
+    users = get_users(twitter,[screen_names])
     [u['id'] for u in users]
 
 def main():
