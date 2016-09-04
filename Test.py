@@ -76,9 +76,9 @@ def get_users(twitter, screen_names):
     use=twitter.users.search(sc=screen_names)
     [u['id'] for u in users]"""
     twitter = get_twitter()
-    users = twitter.get_users(twitter,[screen_names])
-    [u['id'] for u in users]
-
+    response = twitter.api.users.show.get(screen_name='twitter')
+    response.data
+  
 def main():
     """ Main method. You should not modify this."""
     twitter = get_twitter()
