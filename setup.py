@@ -52,5 +52,4 @@ setup(name=PKG,
       zip_safe = True,
       test_suite="tests",
       tests_require=['coverage', 'mock'])
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
+
