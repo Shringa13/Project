@@ -6,7 +6,6 @@ import sys
 import time
 from TwitterAPI import TwitterAPI
 from twitter import *
-import twitter api = twitter.Api() ```
 
 
 consumer_key = 'cgzXf3uv155176JFvWFDPPTLQ'
