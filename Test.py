@@ -5,8 +5,7 @@ import networkx as nx
 import sys
 import time
 from TwitterAPI import TwitterAPI
-from twitter import *
-import twitter api
+import twitter
 
 
 consumer_key = 'cgzXf3uv155176JFvWFDPPTLQ'
