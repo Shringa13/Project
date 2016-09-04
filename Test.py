@@ -74,14 +74,13 @@ def robust_request(twitter, resource, params, max_tries=5):
         twitter = get_twitter()
         users = get_users(twitter, ['twitterapi', 'twitter'])
         return users
-    
-    >>> [u['id'] for u in users]
-    [6253282, 783214]
- """
+        [u['id'] for u in users]
+        [6253282, 783214]
+    """
 
   
 def main():
-    """ Main method. You should not modify this. """
+    """ Main method. You should not modify this."""
     twitter = get_twitter()
     screen_names = read_screen_names('candidates.txt')
     print('Established Twitter connection.')
