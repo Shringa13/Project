@@ -77,9 +77,8 @@ def robust_request(twitter, resource, params, max_tries=5):
     
     >>> [u['id'] for u in users]
     [6253282, 783214]
-    ###TODO
-    pass
-     """
+ """
+
   
 def main():
     """ Main method. You should not modify this. """
