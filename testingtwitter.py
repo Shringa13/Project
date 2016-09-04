@@ -39,7 +39,7 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
     """
     twitter = get_twitter()
-    users = twitter._RestIterable(screen_names)
+    users = twitter.__init__(screen_names)
     print('Established Twitter connection.')
   
 
