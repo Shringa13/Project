@@ -76,8 +76,8 @@ def get_users(twitter, screen_names):
     use=twitter.users.search(sc=screen_names)
     [u['id'] for u in users]"""
     twitter = get_twitter()
-    response = twitter.api.users.show.get(screen_name='twitter')
-    response.data
+    api = twitter.Api(consumer_key,consumer_secret,access_token_key,access_token_secret)
+    users=api.GetFriends()
   
 def main():
     """ Main method. You should not modify this."""
