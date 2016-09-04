@@ -38,6 +38,7 @@ def get_users(twitter, screen_names):
     >>> [u['id'] for u in users]
     [6253282, 783214]
     """
+    twitter = get_twitter()
     users = twitter._RestIterable(screen_names)
     print('Established Twitter connection.')
   
