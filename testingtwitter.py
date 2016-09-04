@@ -78,7 +78,7 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
     """
     twitter = get_twitter()
-    request=twitter.request('https://api.twitter.com/1.1/users/lookup.json',screen_names)
+    request=robust_request('https://api.twitter.com/1.1/users/lookup.json',screen_names)
     return request
 
 
