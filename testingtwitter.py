@@ -35,7 +35,7 @@ def read_screen_names(filename):
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
     """
     f=open(filename,"r")
-    return f.read()
+    return f.readlines()
 
 
 # I've provided the method below to handle Twitter's rate limiting.
