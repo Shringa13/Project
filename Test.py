@@ -75,7 +75,6 @@ def get_users(twitter, screen_names):
     twitter = get_twitter()
     api= twitter.api()
     users = api.GetUser(screen_names)
-    u.name for u in users
     return users
     
 def main():
