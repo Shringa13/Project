@@ -1,19 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @Shringa13
- Watch 333
-  Star 2,470
-  Fork 966 joestump/python-oauth2
- Code  Issues 36  Pull requests 26  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathpython-oauth2/setup.py
-9d5a569  on Sep 12, 2015
- Daniel J Holmes (jaitaiwan) Bump Version
-6 contributors @joestump @tseaver @zookos @leah @ieure @rickhanlonii
-RawBlameHistory     Executable File  55 lines (52 sloc)  1.8 KB
 #!/usr/bin/env python
 from __future__ import print_function
 from setuptools import setup, find_packages
