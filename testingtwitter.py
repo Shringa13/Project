@@ -39,7 +39,10 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
     """
     twitter = get_twitter()
-    users = twitter.__init__(screen_names)
+    r = twitter.request('search/tweets', {'q':'pizza'})
+    for item in r.get_iterator():
+    print item
+   
     print('Established Twitter connection.')
   
 
