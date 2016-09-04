@@ -78,7 +78,7 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
     """
     for sn in range(len(screen_names)):
-        Print 'Range:',screen_names[sn]
+        Print 'Range:', screen_names[sn]
     """
     request=robust_request('users/lookup',[screen_names])
     return request
@@ -91,6 +91,7 @@ def main():
     screen_names = read_screen_names('candidates.txt')
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
+    get_users(twitter, screen_names)
     """
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
     print('found %d users with screen_names %s' %
