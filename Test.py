@@ -70,9 +70,8 @@ def robust_request(twitter, resource, params, max_tries=5):
         A list of dicts, one per user, containing all the user information
         (e.g., screen_name, id, location, etc)
     See the API documentation here: https://dev.twitter.com/rest/reference/get/users/lookup
-    In this example, I test retrieving two users: twitterapi and twitter.
-    """
-     twitter = get_twitter()
+    In this example, I test retrieving two users: twitterapi and twitter."""
+    twitter = get_twitter()
     users = get_users(twitter, ['twitterapi', 'twitter'])
     return users
     """
