@@ -37,19 +37,24 @@ def get_users(twitter, screen_names):
     >>> users = get_users(twitter, ['twitterapi', 'twitter'])
     >>> [u['id'] for u in users]
     [6253282, 783214]
-    """
+    
     twitter = get_twitter()
     r = twitter.request('search/tweets', {'q':'pizza'})
     for item in r.get_iterator():
         print (item)
         print('Established Twitter connection.')
-  
+  """
 
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
-    u= get_users(twitter,'Shringa13')
+     twitter = get_twitter()
+    r = twitter.request('search/tweets', {'q':'pizza'})
+    for item in r.get_iterator():
+        print (item)
     """
+    u= get_users(twitter,'Shringa13')
+   
     screen_names = read_screen_names('candidates.txt')
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
