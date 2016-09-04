@@ -76,13 +76,10 @@ def get_users(twitter, screen_names):
     >>> users = get_users(twitter, ['twitterapi', 'twitter'])
     >>> [u['id'] for u in users]
     [6253282, 783214]
-  
-    for sn in range(0,len(screen_names)):
-        print (screen_names[sn])
-    for idx,sn in enumerate(screen_names)
     """
     for sn in range(len(screen_names)):
         print (screen_names[sn])
+    request=robust_request(twitter,'users/lookup',screen_names[sn])
     """
     request=robust_request('users/lookup',[screen_names])
     return request
@@ -96,11 +93,10 @@ def main():
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
     get_users(twitter, screen_names)
-    """
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
-   
+   """
     add_all_friends(twitter, users)
     print('Friends per candidate:')
     print_num_friends(users)
