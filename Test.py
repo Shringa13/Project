@@ -61,7 +61,7 @@ def robust_request(twitter, resource, params, max_tries=5):
             sys.stderr.flush()
             time.sleep(61 * 15)
             
-    def get_users(twitter, screen_names):
+def get_users(twitter, screen_names):
     """Retrieve the Twitter user objects for each screen_name.
     Params:
         twitter........The TwitterAPI object.
@@ -71,14 +71,12 @@ def robust_request(twitter, resource, params, max_tries=5):
         (e.g., screen_name, id, location, etc)
     See the API documentation here: https://dev.twitter.com/rest/reference/get/users/lookup
     In this example, I test retrieving two users: twitterapi and twitter.
-        twitter = get_twitter()
-        users = get_users(twitter, ['twitterapi', 'twitter'])
-        return users
-        [u['id'] for u in users]
-        [6253282, 783214]
+    >>> twitter = get_twitter()
+    >>> users = get_users(twitter, ['twitterapi', 'twitter'])
+    >>> [u['id'] for u in users]
+    [6253282, 783214]
     """
-
-  
+    
 def main():
     """ Main method. You should not modify this."""
     twitter = get_twitter()
