@@ -36,7 +36,7 @@ def read_screen_names(filename):
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
     """
     fh=open(filename,"r")
-    fh.read()
+    return fh.read()
   
 def main():
     """ Main method. You should not modify this. """
