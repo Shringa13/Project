@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import sys
 import time
-from twitter import twitterAPI
+from twitter import *
 
 
 consumer_key = 'cgzXf3uv155176JFvWFDPPTLQ'
