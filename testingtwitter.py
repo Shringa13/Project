@@ -48,7 +48,6 @@ def get_users(twitter, screen_names):
 def main():
     """ Main method. You should not modify this. """
     twitter = get_twitter()
-     twitter = get_twitter()
     r = twitter.request('search/tweets', {'q':'pizza'})
     for item in r.get_iterator():
         print (item)
