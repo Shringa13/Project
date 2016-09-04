@@ -75,7 +75,9 @@ def get_users(twitter, screen_names):
     users=twitter.get_user(screen_names)
     return users
     """
-    print('Got error \nsleeping for 15 minutes.')
+    fh=open(filename,"r")
+    return fh.read()
+ 
     
 def main():
     """ Main method. You should not modify this."""
