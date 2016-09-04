@@ -73,7 +73,7 @@ def get_users(twitter, screen_names):
     In this example, I test retrieving two users: twitterapi and twitter.
     """
     twitter = get_twitter()
-    users=twitter.show_user(screen_name = user)
+    users=twitter.user(screen_name = screen_names)
     return users
     
 def main():
