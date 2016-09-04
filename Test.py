@@ -73,9 +73,10 @@ def get_users(twitter, screen_names):
     In this example, I test retrieving two users: twitterapi and twitter.
     """
     twitter = get_twitter()
-    users = get_users(twitter, ['twitterapi', 'twitter'])
-    """
+    users = get_users(twitter, screen_names)
     [u['id'] for u in users]
+        return users
+    """
     [6253282, 783214]
     """
     
