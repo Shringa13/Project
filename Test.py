@@ -72,8 +72,8 @@ def get_users(twitter, screen_names):
     See the API documentation here: https://dev.twitter.com/rest/reference/get/users/lookup
     In this example, I test retrieving two users: twitterapi and twitter."""
     twitter = get_twitter()
-    use=twitter.get_users(twitter,screen_names)
-    return use
+    use=twitter.users.search(sc=screen_names)
+    [u['id'] for u in users]
 
 def main():
     """ Main method. You should not modify this."""
