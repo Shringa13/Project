@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import sys
 import time
-from TwitterAPI import TwitterAPI
 import twitter
 
 
