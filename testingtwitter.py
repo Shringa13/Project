@@ -36,7 +36,7 @@ def read_screen_names(filename):
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
     """
     f=open(filename,"r")
-    return f.readlines()
+    scrn= f.readlines()
     """
     for sn in range(len(scrn)):
     	scrn[sn].strip()
