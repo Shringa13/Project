@@ -33,9 +33,15 @@ def read_screen_names(filename):
     Here's a doctest to confirm your implementation is correct.
     >>> read_screen_names('candidates.txt')
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
-    """
     f=open(filename,"r")
     return f.readlines()
+    """
+    f=open(filename,"r")
+	scrn=f.readlines()
+	
+	for sn in range(len(scrn)):
+		scrn[sn].strip()
+	return scrn
 
 
 # I've provided the method below to handle Twitter's rate limiting.
