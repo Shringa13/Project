@@ -78,7 +78,7 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
     """
     for sn in range(len(screen_names)):
-       print (sn,screen_names[sn])
+       print (screen_names[sn])
     """  
     params = [i for i in range(len(screen_names))]
     print (params)
