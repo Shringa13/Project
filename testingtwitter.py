@@ -37,9 +37,10 @@ def read_screen_names(filename):
     """
     f=open(filename,"r")
     scrn= f.readlines()
+    scrn1=scrn
     for sn in range(len(scrn)):
-    	scrn[sn].strip()
-    return scrn
+    	scrn1[sn]=scrn[sn].strip()
+    return scrn1
 
 
 # I've provided the method below to handle Twitter's rate limiting.
