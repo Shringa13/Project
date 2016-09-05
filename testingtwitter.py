@@ -35,7 +35,7 @@ def read_screen_names(filename):
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
     """
     f=open(filename,"r")
-    return f.read()
+    return f.readlines()
 
 
 # I've provided the method below to handle Twitter's rate limiting.
@@ -78,7 +78,8 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
   
     """
-    print(screen_names)
+    lines = [line.rstrip('\n') for line in open(screen_names)]
+    print(lines)
     for sn in range(len(screen_names)):
         print (screen_names[sn])
     """request=robust_request(twitter,'users/lookup','screen_name:'screen_names)
