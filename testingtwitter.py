@@ -78,11 +78,11 @@ def get_users(twitter, screen_names):
     [6253282, 783214]
     """
     for sn in range(len(screen_names)):
-       """ print (screen_names[sn])"""
-       
+       print (sn,screen_names[sn])
+     """  
     params = [i for i in range(len(screen_names))]
    print (params)
-     """request=robust_request('users/lookup',[screen_names[sn]])
+     request=robust_request('users/lookup',[screen_names[sn]])
    
     request=robust_request('users/lookup',[screen_names])
     return request
