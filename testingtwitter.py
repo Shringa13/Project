@@ -108,9 +108,11 @@ def main():
     print('Established Twitter connection.')
     print('Read screen names: %s' % screen_names)
     users = get_users(twitter, screen_names)
+    print (users)
+    """
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
-    """
+   
     users = sorted(get_users(twitter, screen_names), key=lambda x: x['screen_name'])
     print('found %d users with screen_names %s' %
           (len(users), str([u['screen_name'] for u in users])))
