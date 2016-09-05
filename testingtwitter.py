@@ -24,6 +24,7 @@ def get_twitter():
 
 def read_screen_names(filename):
     """
+    
     Read a text file containing Twitter screen_names, one per line.
     Params:
         filename....Name of the file to read.
