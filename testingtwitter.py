@@ -81,7 +81,7 @@ def get_users(twitter, screen_names):
     print (screen_names)
     for name in screen_names:
         print(name.strip('\n'))
-        line= names.split(',')
+        line= name.split(',')
         print (line)
     for sn in range(len(screen_names)):
         print (screen_names[sn])
