@@ -33,8 +33,6 @@ def read_screen_names(filename):
     Here's a doctest to confirm your implementation is correct.
     >>> read_screen_names('candidates.txt')
     ['DrJillStein', 'GovGaryJohnson', 'HillaryClinton', 'realDonaldTrump']
-    f=open(filename,"r")
-    return f.readlines()
     """
     f=open(filename,"r")
     return f.readlines()
